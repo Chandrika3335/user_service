@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: chandu 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chandu
+  template:
+    metadata:
+      labels:
+        app: chandu 
+    spec:
+      containers:
+        - name: chandu 
+          image: revhireacrchandu2001.azurecr.io/chandu
+          ports:
+          - containerPort: 8082
