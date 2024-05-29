@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: samudralajeevanalakshmijeevanauserservice 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: samudralajeevanalakshmijeevanauserservice
+  template:
+    metadata:
+      labels:
+        app: samudralajeevanalakshmijeevanauserservice 
+    spec:
+      containers:
+        - name: samudralajeevanalakshmijeevanauserservice 
+          image: revhireacr.azurecr.io/samudralajeevanalakshmijeevanauserservice
+          ports:
+          - containerPort: 8082
